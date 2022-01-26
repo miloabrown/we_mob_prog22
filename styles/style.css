@@ -1,0 +1,47 @@
+html{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: rgb(174, 174, 174);
+}
+h1 {
+    font-size: 60px;
+    text-align: center;
+    
+}
+p,li {
+    line-height: 2;
+    letter-spacing: 1px;
+}
+table{
+    border: 2px solid black;
+    margin-left: auto ;
+    margin-right: auto;
+    width:25%;
+    
+}
+td,th{
+    text-align: center;
+    padding: 15px;
+    vertical-align: top;
+}
+th{
+    background-color: #04AA6D;
+    color: white;
+}
+label,input{
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    color: black;
+}
+a#email{
+    color: rgb(230, 92, 92);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a:hover{
+    background-color: #04AA6D;
+    color: white;
+}
+
