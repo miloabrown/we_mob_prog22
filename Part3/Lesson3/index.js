@@ -2,7 +2,9 @@ const { response } = require("express");
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
+app.use(cors());
 app.use(bodyParser.json());
 
 let notes = [
@@ -52,7 +54,7 @@ const generateId = () => {
       ? notes
           .map((n) => n.id)
           .sort((a, b) => a - b)
-          .reverse()[0]
+          .reverse()[0] + 1
       : 1;
   return maxId;
 };
@@ -74,6 +76,7 @@ app.post("/notes", (req, res) => {
   res.json(note);
 });
 
-const PORT = 3001;
-app.listen(PORT);
-console.log(`Server running on port ${PORT}`);
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
